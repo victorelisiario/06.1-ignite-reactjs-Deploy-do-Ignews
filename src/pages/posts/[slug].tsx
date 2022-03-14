@@ -53,7 +53,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, params }) =>
 
   const prismic = getPrismicClient(req)
 
-  const response = await prismic.getByUID('publicati', String(slug), {})
+  const response = await prismic.getByUID<any>('publicati', String(slug), {})
 
   const post = {
     slug,
